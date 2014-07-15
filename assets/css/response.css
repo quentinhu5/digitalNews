@@ -1,0 +1,207 @@
+img, object, embed, video {
+  max-width: 100%;
+}
+
+/* IE 6 不支持最大宽度，因此默认为 100% 宽度 */
+.ie6 img {
+  width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;   /*防止图片失真*/
+}
+
+
+/* 移动设备布局 */
+@media only screen and (max-width: 630px) {
+
+#header { width: 96%; padding-left: 1.8%; padding-right: 1.8%; }
+#wrapper {  width: 99%; padding-left: 0.4%; padding-right: 0.4%; margin-left: auto; margin-right: auto; }
+#footer { width: 96%; padding-left: 1.8%; padding-right: 1.8%; }
+
+/* header-mobile
+ * ================================================================= */
+#header h1 { float: none; }
+#header { border-bottom-width: 0; }
+.nav { margin-top: 78px; }
+.nav-phone, .nav-pc, .nav-camera, .nav-hardware, .nav-office { 
+  border-bottom: 3px solid #5dbfe6;
+  border-right: 3px solid #5dbfe6;
+  margin-top: 3px; margin-right: 5px;
+}
+.nav-detail-wrap { display: none; }
+#wrapper { margin-top: 20px; }
+
+
+
+
+/* footer-mobile
+ * ================================================================= */
+#footer { margin-top: 20px; }
+#footer .site-info { width: 100%; } /*c*/
+#footer .site-info .copyright { float: none; } /*c*/
+#footer .site-info ul { width: 75%; margin: 0 12%; } /*c*/
+#footer .site-info li { width: 60px; border-right: 0; } /*c*/
+
+
+
+
+/* wrapper-mobile
+ * ================================================================= */
+#latest { margin-bottom: 0; }
+#latest .latest-news { float: none; width: 80%; margin-left: 5%; }
+#latest .product { float: none; width: 100%; }
+#latest .hot-product { display: none; }
+#latest .hot-news { display: block; float: none; width: 100%; }
+#latest .hot-news h2 { margin-left: 3%; }
+#latest .hot-news ol { margin-left: 7%; }
+#latest .hot-news ol li .count { display: none; }
+
+
+
+
+/* content-mobile
+ * ================================================================= */
+.new-phone, .phone-content-news, .phone-market-app, .phone-market, .phone-app,
+.hot-pc, .pc-content-news, .pc-market-skills, .pc-market, .pc-skills { float: none; }
+.new-phone, .hot-pc { width: 100%; padding-left: 5px; }
+.pc-content-news, .pc-skills { padding-left: 5px; width: 100%; }
+.phone-content-news, .phone-app { padding-left: 5px; width: 100%; }
+.phone-market-app, .pc-market-skills { float: none; width: 99%; }
+.phone-market, .phone-app, .pc-market, .pc-skills { width: 100%; }
+.phone-market, .pc-market { padding-left: 5px; }
+#content ul li { padding-left: 0; background: none; }
+
+
+}
+
+
+/* 平板电脑布局 */
+@media only screen and (min-width: 630px) {
+
+#header { width: 96%; padding-left: 1.8%; padding-right: 1.8%; }
+#wrapper {  width: 99%; padding-left: 0.4%; padding-right: 0.4%; margin-left: auto; margin-right: auto; }
+#footer { width: 96%; padding-left: 1.8%; padding-right: 1.8%; }
+
+
+
+
+/* header-tablet
+ * ================================================================= */
+#header h1 { float: none; }
+#header { border-bottom-width: 0; }
+.nav { margin-top: 78px; }
+.nav-phone, .nav-pc, .nav-camera, .nav-hardware, .nav-office { 
+  border-bottom: 3px solid #5dbfe6;
+  border-right: 3px solid #5dbfe6;
+  margin-right: 5px;
+}
+.nav-detail-wrap { display: none; }
+#wrapper { margin-top: 20px; }
+
+
+
+
+/* footer-tablet
+ * ================================================================= */
+#footer { margin-top: 40px; }
+#footer .site-info { width: 530px; }
+#footer .site-info .copyright { float: left; }
+#footer .site-info ul { width: auto; margin: 0; }
+#footer .site-info li { width: 80px; border-right: 1px solid #ddd; }
+
+
+
+
+/* wrapper-tablet
+ * ================================================================= */
+#latest { margin-bottom: 50px; }
+#latest .latest-news { float: left; width: 43%; margin-left: 0.5%; min-width: 0; }
+#latest .product { float: left; width: 56%; }
+#latest .hot-product { display: block; }
+#latest .hot-news { display: none; }
+
+
+
+
+/* content-tablet
+ * ================================================================= */
+.new-phone, .phone-content-news, .phone-market-app, .phone-market, .phone-app,
+.hot-pc, .pc-content-news, .pc-market-skills, .pc-market, .pc-skills { float: left; }
+.new-phone, .hot-pc { width: 49%; padding-left: 8px; }
+.pc-content-news, .pc-skills { padding-left: 0; width: 48%; }
+.phone-content-news, .phone-app { padding-left: 0; width: 48%; }
+.phone-market-app, .pc-market-skills { float: none; width: 99%; }
+.phone-market, .phone-app, .pc-market, .pc-skills { width: 48%; }
+.phone-market, .pc-market { padding-left: 8px; }
+#content ul li { padding-left: 15px; background: url(../img/bullet_gray_9x9.gif) no-repeat 0px 4px; }
+
+
+}
+
+
+
+
+
+/* 桌面电脑布局 */
+@media screen and (min-width: 1000px) {
+
+#header { width: 96%; padding-left: 1.8%; padding-right: 1.8%; }
+#wrapper { width: 96%; padding-left: 1.8%; padding-right: 1.8%; max-width: 1100px; margin-left: auto; margin-right: auto;}
+#footer { width: 96%; padding-left: 1.8%; padding-right: 1.8%; }
+
+
+
+
+/* header-desktop
+ * ================================================================= */
+#header h1 { float: none; }
+#header { border-bottom-width: 3px; }
+.nav-phone, .nav-pc, .nav-camera, .nav-hardware, .nav-office { 
+  border-right: 0; border-bottom: 0;
+  margin-right: 0;
+}
+.nav .office { border-right: 3px solid #17779e; }
+.nav { margin-top: 38px; }
+.nav-detail-wrap { display: block; } /*显示/隐藏详细分类*/
+#wrapper { margin-top: 40px; }
+
+
+
+
+/* footer-desktop
+ * ================================================================= */
+#footer { margin-top: 40px; }
+#footer .site-info { width: 530px; }
+#footer .site-info .copyright { float: left; }
+#footer .site-info ul { width: auto; margin: 0; }
+#footer .site-info li { width: 80px; border-right: 1px solid #ddd; }
+
+
+
+
+/* wrapper-desktop
+ * ================================================================= */
+#latest { margin-bottom: 50px; }
+#latest .latest-news { float: left; width: 32%; margin-left: 0; min-width: 260px; }
+#latest .product { float: left; width: 35%; }
+#latest .hot-product { display: block; }
+#latest .hot-news { display: block; float: left; width: 32%; _width: 31%; }
+#dlatest .hot-news h2 { margin-left: 6%; }
+#dlatest .hot-news ol { margin-left: 17%; }
+#latest .hot-news ol li .count { display: block; _margin-left: 0; }
+
+
+
+
+/* content-desktop
+ * ================================================================= */
+.new-phone, .phone-content-news, .phone-market-app, .phone-market, .phone-app,
+.hot-pc, .pc-content-news, .pc-market-skills, .pc-market, .pc-skills { float: left; }
+.new-phone, .hot-pc { width: 34%; padding-left: 15px; }
+.pc-content-news, .pc-skills { padding-left: 0; width: 34%; }
+.phone-content-news, .phone-app { padding-left: 0; width: 34%; }
+.phone-market-app, .pc-market-skills { float: left; width: 30%; }
+.phone-market, .phone-app, .pc-market, .pc-skills { width: 100%; }
+.phone-market, .pc-market { padding-left: 0px; }
+#content ul li { padding-left: 15px; background: url(../img/bullet_gray_9x9.gif) no-repeat 0px 4px; }
+
+}

@@ -1,0 +1,287 @@
+/**
+ * colors:
+ * #5dbfe6(blue)          nav_border
+ * #E7F5FA(light blue)    nav_background
+ * #17779E(dark blue)     nav_border_active
+ * #ff7700(orange)        h_em_border-bottom
+ * #cccccc(gray)          h_small_border-bottom
+ * #f7f0bf(light yellow)  lava_background
+ * #F4C852(orange)        hot_product_border
+ * #26ADE4(light blue)    a:hover
+ */
+
+/* global
+ * ================================================================= */
+html, button, input, select, textarea {
+  font-family: Helvetica, Arial, SimSun, serif;
+  font-size: 13px;
+}
+html h1, html h2, html h3, html h4, html h5, html h6 { 
+  font-family: Helvetica, Arial, "Microsoft YaHei", SimSun, serif;
+}
+
+
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+  content: ".";    
+  display: block;    
+  height: 0;
+  visibility: hidden;    
+}
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; } /* IE < 8 */
+
+a { text-decoration: none; color: #000; }
+a:hover { text-decoration: none; color: #26ADE4; }
+
+
+
+
+/* header 
+ * ================================================================= */
+body { background: #f6f6f6 url(../img/bg_yellow_gradient_1x115.gif) repeat-x scroll 0 0; }
+#header { width: 96%; height: auto; padding-left: 2%; padding-right: 2%; border-bottom: 3px solid #5dbfe6; }
+#header .logo {
+  float: left;
+  width: 170px; height: 55px;
+  padding-bottom: 3px;
+  margin: 0; margin-top: 13px; margin-right: 2.5%;
+  color: #eee; font-size: 35px; text-align: center;
+
+  text-shadow: 1px 1px 0px rgb(62, 51, 23), 2px 2px 0px rgb(88, 73, 33), 3px 3px 0px rgb(114, 94, 43), 4px 4px 0px rgb(140, 116, 53), 5px 5px 0px rgb(166, 138, 63), 6px 6px 0px rgb(192, 159, 73), 7px 7px 0px rgb(218, 181, 83), 8px 8px 0px rgb(244, 203, 93);
+
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmOGRmOTIiIHN0b3Atb3BhY2l0eT0iMCIvPgogICAgPHN0b3Agb2Zmc2V0PSI4JSIgc3RvcC1jb2xvcj0iI2Y4ZTE5NyIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2Y5ZWFiMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk0JSIgc3RvcC1jb2xvcj0iI2ZhZjRjYSIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmYWY1Y2UiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvcmFkaWFsR3JhZGllbnQ+CiAgPHJlY3QgeD0iLTUwIiB5PSItNTAiIHdpZHRoPSIxMDEiIGhlaWdodD0iMTAxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(248,223,146,0) 0%, rgba(248,225,151,0) 8%, rgba(249,234,176,1) 50%, rgba(250,244,202,0) 94%, rgba(250,245,206,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(248,223,146,0)), color-stop(8%,rgba(248,225,151,0)), color-stop(50%,rgba(249,234,176,1)), color-stop(94%,rgba(250,244,202,0)), color-stop(100%,rgba(250,245,206,0))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(248,223,146,0) 0%,rgba(248,225,151,0) 8%,rgba(249,234,176,1) 50%,rgba(250,244,202,0) 94%,rgba(250,245,206,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  rgba(248,223,146,0) 0%,rgba(248,225,151,0) 8%,rgba(249,234,176,1) 50%,rgba(250,244,202,0) 94%,rgba(250,245,206,0) 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(248,223,146,0) 0%,rgba(248,225,151,0) 8%,rgba(249,234,176,1) 50%,rgba(250,244,202,0) 94%,rgba(250,245,206,0) 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  rgba(248,223,146,0) 0%,rgba(248,225,151,0) 8%,rgba(249,234,176,1) 50%,rgba(250,244,202,0) 94%,rgba(250,245,206,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f8df92', endColorstr='#00faf5ce',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+
+}
+#header ul { list-style: none; position: relative; z-index: 19; }
+/*导航*/
+.nav { position: relative; margin: 0; margin-top: 38px; padding: 0; }
+.nav-phone, .nav-pc, .nav-camera, .nav-hardware, .nav-office {
+  display: inline;
+  position: relative; dz-index: 19; float: left;
+  width: 100px; height: 34px;
+  text-align: center;
+  border-top: 3px solid #5dbfe6; border-left: 3px solid #5dbfe6;
+  background-color: #E7F5FA; background-color: rgba(231,245,250, .8);
+}
+.ie6 .nav-phone, .ie6 .nav-pc, .ie6 .nav-camera, .ie6 .nav-hardware, .ie6 .nav-office,
+.ie7 .nav-phone, .ie7 .nav-pc, .ie7 .nav-camera, .ie7 .nav-hardware, .ie7 .nav-office,
+.ie8 .nav-phone, .ie8 .nav-pc, .ie8 .nav-camera, .ie8 .nav-hardware, .ie8 .nav-office { background-color: #E7F5FA; }
+.nav .nav-office { border-right: 3px solid #5dbfe6; }
+.nav li h3 {
+  display: inline;
+  height: 34px;
+  margin: 0;
+  font-size: 16px; font-weight: 400;
+}
+.nav li h3 a { display: block; height: 34px; line-height: 34px; color: #555; }
+.nav li h3 a:hover { color: #ff7700; }
+.nav .active { border-color: #17779E; background-color: rgba(231,245,250, 1); }
+.nav .activel { border-left-color: #17779E; }
+
+/*分类*/
+#header li:hover h3 a  { color: #ff7700; }
+.nav-detail-wrap { display: block; }
+.nav-detail {
+  display: none;
+  position: absolute; dz-index: 20; left: -3px;
+  width: 500px; 
+  border: 3px solid #17779E;
+  background-color: #E7F5FA; background-color: rgb(231,245,250);
+}
+html > body .nav-detail .border-cover { position: absolute; left: 0; top: -3px; width: 100px; height: 3px; background-color: #E7F5FA; }
+.nav-detail .item-brand, .nav-detail .item-branch { float: left; }
+.item-brand .brand, .item-brand ul, .item-brand ul li { float: left; }
+.item-branch h4, .item-branch ul, .item-branch ul li { float: left; }
+.nav-detail h4 { margin: 20px 20px 0 0; color: #ff7700; font-size: 15px; text-align: right; }
+.nav-detail ul { margin: 16px 0 0 0; padding: 0; }
+.nav-detail ul li { height: 25px; line-height: 25px; text-align: left; }
+/*phone*/
+.phone-list .brand, .phone-list ul, .phone-list ul li { float: left; }
+.phone-list { width: 500px; height: 100px; }
+.phone-list .brand { width: 100px; margin-top: 20px; }
+.phone-list ul { width: 350px; height: 80px; }
+.phone-list ul li { width: 70px;}
+/*pc*/
+.pc-list { width: 620px; height: 300px; }
+.pc-list h4 { width: 100px; }
+.pc-list ul { width: 450px; height: 60px; }
+.pc-list ul li { width: 90px; }
+.pc-list .tablet { height: 45px; }
+.pc-list .tablet ul { height: 29px; }
+/*camera*/
+.camera-list { width: 520px; height: 300px; }
+.camera-list h4 { width: 100px; }
+.camera-list ul { width: 400px; height: 50px; }
+.camera-list ul li { width: 90px; }
+.camera-list .item-brand { height: 80px; }
+.camera-list .photograph { height: 35px; }
+.camera-list .photograph ul { height: 19px; }
+/*hardware*/
+.hardware-list { width: 420px; height: 90px; }
+.hardware-list ul { width: 360px; height: 60px; margin-left: 35px; }
+.hardware-list ul li { width: 51px; }
+/*office*/
+.nav-office .office-list { width: 330px; height: 155px; }
+.nav-office .office-list .item-branch { width: 340px; }
+.nav-office .office-list ul { width: 315px; height: 120px; margin-left: 20px; }
+.nav-office .office-list ul li { width: 75px; }
+
+
+
+
+/* footer
+ * ================================================================= */
+#footer { display: block; float: left; height: 25px; margin-top: 40px; }
+#footer .site-info { width: 530px; line-height: 25px; padding: 0; margin-left: auto; margin-right: auto; text-align: center; *margin-bottom: 30px; }
+#footer .site-info .copyright { display: block; float: left; }
+#footer .site-info ul { display: block; list-style: none; float: left; width: auto; padding: 0; margin: 0; word-wrap: break-all; }
+#footer .site-info li { float: left; width: 80px; border-right: 1px solid #ddd; }
+#footer .site-info li:last-child, #footer .site-info li.last  { border-right: none; }
+
+
+
+
+/* wrapper
+ * ================================================================= */
+#wrapper-container { padding-left: 10px; padding-right: 10px; margin-right: auto; margin-left: auto; _width: 978px; }
+    /*ie6/7 *position: relative; *z-index: -30; 解决幻灯不显示问题*/
+#wrapper { 
+  width: 98%; height: auto; max-width: 1100px;
+  padding-left: 0.8%; padding-right: 0.8%; 
+  border: 1px solid #ccc; border-top-width: 4px; 
+  margin-top: 40px; margin-right: auto; margin-left: auto; 
+  background-color: #fff;
+  *position: relative; /**z-index: 0;*/
+}
+#latest { float: left; width: 100%; height: auto; margin-top: 10px; margin-bottom: 50px; }
+#latest h2 { padding-bottom: 5px; border-bottom: 2px solid #ccc; }
+#latest h2 em { padding-bottom: 5px; border-bottom: 2px solid #ff7700; margin: 0 15px 10px 0; font-style: normal; }
+#latest h2 small { color: #ccc; font-family: Helvetica, Arial, SimSun, serif; }
+
+/*最新资讯*/
+#latest .latest-news { float: left; width: 32%; height: auto; min-width: 260px; }
+#latest .latest-news h2 { width: 93%; }
+#latest .latest-news ul { list-style: none; padding: 0; margin-bottom: 0; margin-left: 4%; }
+#latest .latest-news ul li { height: 30px; line-height: 15px; font-size: 14px; }
+
+/*猜你喜欢*/
+#latest .hot-news { display: block; float: left; width: 32%; height: auto; min-width: 200px; }
+#latest .hot-news h2 { width: 97%; margin-left: 6%; _margin-left: 4%; }
+#latest .hot-news ol { padding: 0; margin-left: 17%; list-style: none; _margin-left: 8%; }
+#latest .hot-news ol li { height: 35px; line-height: 15px; font-size: 15px; }
+#latest .hot-news ol li .count { float: left; margin-left: -24px; color: #6c7376; font: italic 16px Georgia,serif; }
+
+/*产品*/
+#latest .product { float: left; width: 35%; height: auto; min-width: 240px; }
+
+/*carousel*/
+.product .product-show { position: relative; dz-index: -22; float: left; width: 99%; height: auto; min-width: 240px; margin-top: 12px; }/*ie6/7加*z-index使下拉导航菜单位于幻灯上方*/
+.product .show-panel { list-style: none; position: relative; dz-index: -21; width: 99.8%; height: auto; min-width: 240px; padding: 0; border: 1px solid #ccc; margin: 10px 0 0; overflow: hidden; }
+.product .show-panel li { display: none; position: absolute; dz-index: -20; width: 100%; left: 0; top: 0; }
+.product .show-panel li:first-child { display: block; position: relative; float: left; }
+.product .show-panel img { display: block; dz-index: -19; float: left; width: 100%; height: auto; }
+.product .show-panel .caption {
+  display: block;
+  position: absolute; dz-index: 5; left: 0; right: 0; bottom: 0;
+  max-width: none;
+  padding: 5px 10px;
+  margin: 0;
+  font-size: 16px; text-shadow: none; color: #fff;
+  background: #000; background: rgba(0,0,0, .7);
+  _width: 100%;
+}
+.product-show_nav {
+  position: absolute; z-index: 6; *z-index: 0; left: 0;
+  width: 25px; height: 35px;
+  margin-top: 19%;
+  overflow: hidden;
+  opacity: 0.7;
+  text-indent: -9999px; text-decoration: none;
+  background: transparent url(../img/nav.jpg) no-repeat left top;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  ddisplay: none;
+}
+.product-show_nav:active { opacity: 1.0; }
+.product-show_nav.next { left: auto; right: 0; background-position: right top; }
+
+
+/*热门产品*/
+#latest .hot-product { float: left; width: 100%; margin-top: 20px; }
+#latest .hot-product h2 { width: 99%; margin: 16px 0 5px 0; }
+#latest .hot-product .product-detail { /*width: 92%;*/ width: 99%; border: 2px solid #F4C852; margin-top: 20px; }
+#latest .hot-product .product-tabs { position: relative; width: 100%; height: 30px; }
+#latest .hot-product .product-tabs .lava {
+    position: absolute; top: 0;
+    width: 20%; /*width: 93px;*/ height: 30px;
+    background: none repeat scroll 0 0 #f7f0bf;
+    _display: inline;
+}
+#latest .hot-product .product-tabs .item {
+  display: block;
+  position: relative; float: left;
+  width: 20%; *width: 19.8%; /*width: 93px;*/ height: 25px; line-height: 30px;
+  padding-top: 4px;
+  font: 500 16px Helvetica, Arial, "Microsoft YaHei", SimSun, serif;
+  text-align: center;
+}
+#latest .hot-product .product-content {
+  position: relative;
+  width: 100%;
+  border-top: 2px solid #F4C852;
+  overflow: hidden;
+}
+#latest .hot-product .product-content .panel { 
+  position: relative;
+  /*width: 2590px; /*width: 2350px; /*width: 100%;*/ height: auto;
+  overflow: hidden;
+}
+#latest .hot-product .product-content .panel ul { list-style: none; float: left; /*width: 500px; /*width: 455px; /*width: 100%;*/ height: auto; padding: 0 0 0 20px; }
+#latest .hot-product .product-content .panel ul li { float: left; width: 112px; margin-top: 3px; }
+
+
+
+
+/* content
+ * ================================================================= */
+#content, #phone, #pc { float: left; width: 100%; height: auto; }
+#content ul { padding: 0; margin-left: 3%; list-style: none; }
+#content ul li { height: 23px; padding-left: 15px; background: url(../img/bullet_gray_9x9.gif) no-repeat 0px 4px; white-space: nowrap; }
+#content h1 { width: 100%; border-bottom: 2px solid #ccc; background-color: #17779e; }
+#content h1 em { display: block; padding-bottom: 5px; padding-left: 10px; border-bottom: 2px solid #ff7700; font-style: normal; text-shadow: 1px 1px 2px #fff; }
+#content h3 { color: #5dbfe6; *width: 100%; *position: relative; }
+#content h3 em { font: normal bold 16px Helvetica, Arial, "Microsoft YaHei", SimSun, serif; }
+#content h3 small { *position: absolute; *top: 0; *right: 0; float: right; margin-right: 10%; color: #999; font-family: Helvetica, Arial, SimSun, serif; } /*ie6/7 修复"更多"错位*/
+.phone-content, .pc-content { width: 100%; height: auto; margin-bottom: 30px; }
+.new-phone, .phone-content-news, .phone-market-app, .phone-market, .phone-app,
+.hot-pc, .pc-content-news, .pc-market-skills, .pc-market, .pc-skills { float: left; }
+
+/*phone*/
+.new-phone { width: 34%; padding-left: 15px; }
+.new-phone .new-phone-detail { margin-bottom: 40px; *width: 300px; }
+.new-phone .new-phone-detail img { float: left; width: 100px; height: 75px; }
+.new-phone .new-phone-detail h4 { margin: 0; font-size: 14px; }
+.new-phone .new-phone-detail div { float: left; width: 58%; margin-left: 5%; *width: 53%; }
+.new-phone .new-phone-detail div a { float: right; color: #ff7700; }
+.phone-content-news { width: 34%; }
+.phone-market-app { width: 30%; }
+
+
+/*pc*/
+.hot-pc { width: 34%; padding-left: 15px; }
+.hot-pc .hot-pc-detail { margin-bottom: 40px; *width: 300px; }
+.hot-pc .hot-pc-detail img { float: left; width: 100px; height: 75px; }
+.hot-pc .hot-pc-detail h4 { margin: 0; font-size: 14px; }
+.hot-pc .hot-pc-detail div { float: left; width: 58%; margin-left: 5%; *width: 53%; }
+.hot-pc .hot-pc-detail div a { float: right; color: #ff7700; }
+.pc-content-news { width: 34%; }
+.pc-market-skills { width: 30%; }
